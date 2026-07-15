@@ -1078,6 +1078,10 @@ a{ color: inherit; text-decoration: none; }
   function openInvitation() {
     if (opened) return;
     opened = true;
+     var music = document.getElementById('bgMusic');
+    if (music) {
+      music.volume = 0.55;
+      music.play().catch(function(){});  }
 
     envelopeScreen.classList.add('is-opening');
     envelope.classList.add('is-open');
